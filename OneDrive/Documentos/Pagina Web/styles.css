@@ -1,0 +1,56 @@
+#titulo_p {
+    background-color: purple;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    padding: 10px;
+}
+
+#seccion1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    padding: 10px;
+}
+
+#seccion1 h2,
+#seccion1 p,
+#seccion1 h1 {
+    color: inherit;
+}
+
+#seccion1 p {
+    background-color: black;
+    font-size: large;
+
+}
+
+#seccion2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    padding: 10px;
+}
+
+#seccion2 h2,
+#seccion2 p,
+#seccion2 h1 {
+    color: inherit;
+}
+
+#seccion2 pre {
+    font-size: large;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 2;
+        transform: translateY(0);
+    }
+}
+
+.animacion {
+    animation: fadeIn 1.5s ease-out;
+}
