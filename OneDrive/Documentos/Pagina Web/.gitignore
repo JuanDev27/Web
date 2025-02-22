@@ -1,0 +1,14 @@
+# Ignorar carpetas de OneDrive
+ONEDRIVE/
+DOCUMENTOS/
+
+# Ignorar archivos temporales
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Ignorar binarios de VS Code o Python
+.vscode/
+__pycache__/
+node_modules/
