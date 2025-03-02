@@ -83,6 +83,20 @@ body {
     color: inherit;
 }
 
+#img2_S2 {
+    width: 13%;
+    height: 17%;
+}
+
+#img1_S2 {
+    width: 15%;
+}
+
+#img3_S2 {
+    width: 23%;
+    height: 19;
+}
+
 #img1_S2:hover,
 #img2_S2:hover,
 #img3_S2:hover {
@@ -232,12 +246,44 @@ a:hover {
 }
 
 /*Efecto para video*/
-#video {
-    filter: grayscale(100%);
+#video,
+#img_carrusel {
+    filter: brightness(80%);
 }
 
-#video:hover {
-    scale: 107%;
-    filter: grayscale(0%);
-    /* Vuelve a color */
+#video:hover,
+#img_carrusel:hover {
+    filter: brightness(120%);
+}
+
+
+/* Estilo del contenedor de cada slide */
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho disponible */
+    overflow: hidden;
+    /* Recorta el contenido que se desborda */
+}
+
+.carousel-item img {
+    width: 700px !important;
+    height: 350px !important;
+}
+
+
+/* Asegura que el contenedor interior se ajuste al contenido */
+.carousel-inner {
+    width: 100%;
+    /* Asegura que el contenedor interior ocupe todo el ancho */
+    height: auto;
+    /* Ajusta la altura según el contenido */
+}
+
+
+img,
+svg {
+    vertical-align: baseline !important;
 }
