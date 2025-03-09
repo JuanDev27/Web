@@ -14,9 +14,8 @@
 </head>
 
 <body>
-
     <!-- Menú de Navegación -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="nav1">
         <div class="container">
             <a class="navbar-brand" href="https://juandev27.github.io/Web/">Página Principal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu_nav">
@@ -155,30 +154,81 @@
 
     <!--Barra de progreso-->
     <div class="container mt-4">
-        <h3>Progreso de la tarea</h3>
+        <h3 style="color: white;">Progreso de la Pagina Web</h3>
         <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="50" aria-valuemin="0"
-                aria-valuemax="100">75%</div>
+            <div class="progress-bar" role="progressbar" style="width: 1%;" aria-valuenow="0.1" aria-valuemin="0"
+                aria-valuemax="100">1%</div>
         </div>
     </div>
 
+    <table>
+        <caption>Ranking de videojuegos</caption>
+        <thead>
+            <tr>
+                <th>Top</th>
+                <th>Videojuego</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <th>Minecraft</th>
+                <th><img id="img_table" src="https://i.pinimg.com/550x/82/b2/1f/82b21fe6d9166c673eed585a5fc38ef5.jpg"
+                        width="50px">
+                </th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>The battle of Polytopia</th>
+                <th><img id="img_table"
+                        src="https://polytopia.io/wp-content/uploads/2024/06/Polytopia-logo-white-2023.png"
+                        width="80px">
+                </th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>Terraria</th>
+                <th><img id="img_table"
+                        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9424d977-f854-4e95-b8ba-ac3cd3ba80ce/d4ppcda-f621b52e-1da0-4e27-80da-016ab6ec80ed.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk0MjRkOTc3LWY4NTQtNGU5NS1iOGJhLWFjM2NkM2JhODBjZVwvZDRwcGNkYS1mNjIxYjUyZS0xZGEwLTRlMjctODBkYS0wMTZhYjZlYzgwZWQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.8XcwmknfeUoyU5Cndt_wa4gYK9JAxZeFovIO8Udy8NE"
+                        width="55px">
+                </th>
+            </tr>
+            <tr>
+                <th>4</th>
+                <th>Ajedrez</th>
+                <th><img id="img_table"
+                        src="https://play-lh.googleusercontent.com/a7R5nyeaX8lIEWdBOxjlvbyq9LcFwh3XMvNtBPEKR3LPGgdvgGrec4sJwn8tUaaSkw=s256-rw"
+                        width="50px">
+                </th>
+            </tr>
+            <tr>
+                <th>5</th>
+                <th>Mario Kart 8</th>
+                <th><img id="img_table"
+                        src="https://amiibo.life/assets/games/eshop_icons/switch/mario-kart-8-deluxe-72a15ae05af6d5ba9fe88df1fe308a26a1acc6a188eef34dcf33db543f38b07c.png"
+                        width="50px">
+                </th>
+            </tr>
+            </tr>
+        </tbody>
+    </table>
     <!--Pie de Pagina-->
     <footer>
         <div id="cont_footer">
             <!--Contacto-->
             <div id="cont_contacto">
-                <h3>Información de Contacto</h3>
+                <h6>Información de Contacto</h6>
                 <address>
                     Nombre: Juan <br>
                     Correo: <a href="mailto:correo@dominio.com">correo@dominio.com</a><br>
-                    Dirección: Cr 0 # 0 - 10, Ciudad, País<br>
                     Teléfono: +12 34567890<br>
                 </address>
             </div>
 
             <!--Redes-->
             <div id="cont_redes">
-                <h3>Redes Sociales</h3>
+                <h6>Redes Sociales</h6>
                 <a href="https://facebook.com" target="_blank">Facebook</a><br>
                 <a href="https://twitter.com" target="_blank">Twitter</a><br>
                 <a href="https://instagram.com" target="_blank">Instagram</a><br>
@@ -187,7 +237,7 @@
 
             <!--Elementos Empresariales-->
             <div id="cont_empresa">
-                <h3>Enlaces Útiles</h3>
+                <h6>Enlaces Útiles</h6>
                 <a href="/privacidad">Política de Privacidad</a><br>
                 <a href="/terminos">Términos y Condiciones</a><br>
                 <a href="/faq">Preguntas Frecuentes</a><br>

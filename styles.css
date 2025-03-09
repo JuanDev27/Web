@@ -132,6 +132,7 @@ footer {
 
 #cont_footer {
     display: grid;
+    font-size: medium;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
@@ -301,9 +302,10 @@ svg {
     vertical-align: baseline !important;
 }
 
+/*Menu Hamburguesa*/
 .navbar-toggler {
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
     border: none;
     /* Eliminar borde si lo tiene */
     background: transparent;
@@ -333,6 +335,11 @@ svg {
 }
 
 @media (max-width: 600px) {
+
+    /*Menu Navegacion*/
+    .navbar {
+        position: static !important;
+    }
 
     #mcLogo {
         height: 50%;
@@ -390,4 +397,65 @@ svg {
         width: 75%;
         height: 35%;
     }
+
+    #cont_footer {
+        font-size: x-small;
+    }
+}
+
+/*Menu Navegacion*/
+#nav1 {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1020;
+}
+
+/*Tabla*/
+caption {
+    background-color: #232487;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+caption,
+th,
+tr,
+thead,
+tbody,
+table {
+    text-align: center !important;
+    caption-side: top !important;
+    color: white !important;
+    align-items: center !important;
+
+}
+
+th,
+td {
+    font-weight: bold;
+    width: 33% !important;
+    border: 3px solid #6f69e3 !important;
+}
+
+thead {
+    font-size: larger;
+    margin: 5px;
+}
+
+#img_table {
+    margin-top: 7px;
+}
+
+table {
+    margin: 30px;
+    table-layout: fixed !important;
+    width: 75%;
+    background: rgb(202 0 210 / 50%);
+    justify-self: anchor-center;
+}
+
+/*Footer*/
+address {
+    margin-bottom: 0 !important;
 }
