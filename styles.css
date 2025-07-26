@@ -8,16 +8,6 @@ body {
     text-align: center;
 }
 
-body {
-    background-image: url('https://raw.githubusercontent.com/JuanDev27/Web/refs/heads/main/res/fondo.jpg');
-    height: 100%;
-    margin: 0;
-}
-
-#encabezado {
-    text-align: center;
-}
-
 #titulo_p {
     background-color: purple;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -74,7 +64,6 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
     padding: 10px;
-    text-align: center;
     text-align: center;
 }
 
@@ -179,41 +168,6 @@ footer {
 }
 
 /*Animacion de aparicion para el Header*/
-/*ANIMACIONES*/
-/*Efecto de una ola*/
-@keyframes wave {
-
-    0%,
-    100% {
-        filter: grayscale(0%);
-        transform: translateY(0);
-    }
-
-    50% {
-        filter: grayscale(100%);
-        transform: translateY(-20px);
-        /* Altura máxima del movimiento */
-    }
-}
-
-/*Aplicar a imagenes*/
-#img1_S3 {
-    animation: wave 2s ease-in-out infinite;
-}
-
-#img2_S3 {
-    animation: wave 2s ease-in-out infinite;
-    animation-delay: 0.5s;
-    /* Retraso para desfasar la ola */
-}
-
-#img3_S3 {
-    animation: wave 2s ease-in-out infinite;
-    animation-delay: 1s;
-    /* Retraso mayor para completar el efecto */
-}
-
-/*Animacion de aparicion para el Header*/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -226,9 +180,6 @@ footer {
     }
 }
 
-/*Llamar ID*/
-.animacion,
-.animacion_t {
 /*Llamar ID*/
 .animacion,
 .animacion_t {
