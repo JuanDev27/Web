@@ -1,14 +1,70 @@
+body {
+    background-image: url('https://raw.githubusercontent.com/JuanDev27/Web/refs/heads/main/res/fondo.jpg');
+    height: 100%;
+    margin: 0;
+}
+
+#encabezado {
+    text-align: center;
+}
+
 #titulo_p {
     background-color: purple;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
     padding: 10px;
+    height: auto;
 }
 
-#seccion1 {
+#img_t {
+    height: 500px;
+    width: 1000px;
+}
+
+#navegacion {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+}
+
+.index {
+    color: white;
+}
+
+.index li {
+    margin: 5px 0;
+}
+
+.index ul li::marker {
+    color: white;
+    /* Cambia el color del punto */
+}
+
+.index a {
+    width: fit-content;
+    /*Ajustar al tamaño del texto*/
+    color: white;
+    font-size: large;
+    display: block;
+}
+
+.index a:hover {
+    font-weight: bold;
+    color: rgb(36, 20, 116);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#seccion1,
+#seccion2,
+#seccion3,
+#titulo_section {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
     padding: 10px;
+    text-align: center;
 }
 
 #seccion1 h2,
@@ -17,16 +73,11 @@
     color: inherit;
 }
 
-#seccion1 p {
-    background-color: black;
-    font-size: large;
-
-}
-
-#seccion2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
-    padding: 10px;
+#seccion1 h2,
+#seccion2 h2,
+#seccion3 h2,
+#titulo_section {
+    background-color: purple;
 }
 
 #seccion2 h2,
@@ -35,10 +86,88 @@
     color: inherit;
 }
 
-#seccion2 pre {
-    font-size: large;
+#img2_S2 {
+    width: 13%;
+    height: 17%;
 }
 
+#img1_S2 {
+    width: 15%;
+}
+
+#img3_S2 {
+    width: 23%;
+    height: 19%;
+}
+
+#img1_S2:hover,
+#img2_S2:hover,
+#img3_S2:hover {
+    scale: 110%;
+    margin-right: 20px;
+    margin-left: 20px;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+}
+
+#seccion3 h2 {
+    color: inherit;
+}
+
+footer {
+    background-color: #301934;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#cont_footer {
+    display: grid;
+    font-size: medium;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#cont_derechos {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/*ANIMACIONES*/
+/*Efecto de una ola*/
+@keyframes wave {
+
+    0%,
+    100% {
+        filter: grayscale(0%);
+        transform: translateY(0);
+    }
+
+    50% {
+        filter: grayscale(100%);
+        transform: translateY(-20px);
+        /* Altura máxima del movimiento */
+    }
+}
+
+/*Aplicar a imagenes*/
+#img1_S3 {
+    animation: wave 2s ease-in-out infinite;
+}
+
+#img2_S3 {
+    animation: wave 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+    /* Retraso para desfasar la ola */
+}
+
+#img3_S3 {
+    animation: wave 2s ease-in-out infinite;
+    animation-delay: 1s;
+    /* Retraso mayor para completar el efecto */
+}
+
+/*Animacion de aparicion para el Header*/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -51,6 +180,377 @@
     }
 }
 
-.animacion {
+/*Llamar ID*/
+.animacion,
+.animacion_t {
     animation: fadeIn 1.5s ease-out;
+}
+
+/*Portabilidad para pantallas pequeñas*/
+@media (max-width: 768px) {
+    body {
+        display: block;
+        font-size: 14px;
+    }
+}
+
+/*Efecto de aparicion para Minecraft Logo(mcLogo)*/
+#mcLogo {
+    width: 400px;
+    height: 400px;
+    filter: brightness(0%);
+    transition: filter 0.5s ease, box-shadow 0.5s ease;
+}
+
+#mcLogo:hover {
+    scale: 107%;
+    filter: brightness(100%);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+}
+
+/*Animacion de pulso para imagen de GigaWorld de 2 fases*/
+@keyframes pulso {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    25%,
+    75% {
+        transform: scale(1.05);
+    }
+
+    50% {
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+        /*Punto maximo*/
+    }
+}
+
+/*Aplicar a imagen*/
+#pagoda {
+    width: 500px;
+    height: auto;
+    animation: pulso 2s infinite ease-in-out;
+}
+
+/*EFECTOS PARA ELEMENTOS*/
+/*Referencias*/
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s;
+}
+
+a:hover {
+    color: #ff5733;
+    text-decoration: underline;
+}
+
+/*Efecto para video*/
+#video,
+#img_carrusel {
+    height: 350px;
+    width: 650px;
+    filter: brightness(80%);
+}
+
+#video:hover,
+#img_carrusel:hover {
+    filter: brightness(120%);
+}
+
+
+/* Estilo del contenedor de cada slide */
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho disponible */
+    overflow: hidden;
+    /* Recorta el contenido que se desborda */
+}
+
+.carousel-item img {
+    width: 700px !important;
+    height: 350px !important;
+}
+
+
+/* Asegura que el contenedor interior se ajuste al contenido */
+.carousel-inner {
+    width: 100%;
+    /* Asegura que el contenedor interior ocupe todo el ancho */
+    height: auto;
+    /* Ajusta la altura según el contenido */
+}
+
+
+img,
+svg {
+    vertical-align: baseline !important;
+}
+
+/*Menu Hamburguesa*/
+.navbar-toggler {
+    margin: 0;
+    padding: 0 !important;
+    border: none;
+    /* Eliminar borde si lo tiene */
+    background: transparent;
+    /* Asegurarse de que el fondo sea transparente */
+}
+
+.navbar-toggler {
+    display: block;
+    /* Asegura que se comporte como un bloque */
+    width: 30px;
+    /* Asegúrate de que tenga un tamaño adecuado */
+    height: 30px;
+    /* Ajusta según sea necesario */
+    position: relative;
+}
+
+
+#menu_nav {
+    text-align: right;
+}
+
+
+.animacion {
+    max-width: 100%;
+    /* Imagen responsiva */
+    height: auto;
+}
+
+@media (max-width: 600px) {
+
+    /*Menu Navegacion*/
+    .navbar {
+        position: static !important;
+    }
+
+    #mcLogo {
+        height: 50%;
+        width: 50%;
+    }
+
+    #pagoda {
+        height: 50%;
+        width: 75%;
+    }
+
+    #img1_S2 {
+        width: 20%;
+    }
+
+    #img2_S2 {
+        width: 18%;
+        height: 22%;
+    }
+
+    #img3_S2 {
+        width: 28%;
+        height: 24%;
+    }
+
+
+    #img1_S3,
+    #img2_S3,
+    #img3_S3 {
+        width: 20%;
+    }
+
+    #carouselExampleIndicators {
+        width: 20%;
+        height: 20%;
+    }
+
+    .animacion {
+        max-width: 70%;
+        /* Ajusta el tamaño en móviles */
+    }
+
+    #img_t {
+        height: 35%;
+        width: 70%;
+    }
+
+    .carousel-item img {
+        width: 350px !important;
+        height: 200px !important;
+    }
+
+    #video,
+    .html5-video-container {
+        width: 75%;
+        height: 35%;
+    }
+
+    #cont_footer {
+        font-size: x-small;
+    }
+}
+
+/*Menu Navegacion*/
+#nav1 {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1020;
+}
+
+/*Tabla*/
+caption {
+    background-color: #232487;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+caption,
+th,
+tr,
+thead,
+tbody,
+table {
+    text-align: center !important;
+    caption-side: top !important;
+    color: white !important;
+    align-items: center !important;
+
+}
+
+th,
+td {
+    font-weight: bold;
+    width: 33% !important;
+    border: 3px solid #6f69e3 !important;
+}
+
+thead {
+    font-size: larger;
+    margin: 5px;
+}
+
+#img_table {
+    margin-top: 7px;
+}
+
+table {
+    margin: 30px;
+    table-layout: fixed !important;
+    width: 75%;
+    background: rgb(202 0 210 / 50%);
+    justify-self: anchor-center;
+}
+
+/*Sección 5*/
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.poke-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.poke-button {
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    background-color: #eee;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.poke-button:hover {
+    background-color: #ffc107;
+    border-color: #ff9800;
+    color: #000;
+}
+
+/*Poster*/
+#battle-poster {
+    width: 80vw;
+    max-width: 700px;
+    height: 350px;
+    margin: 20px auto 0;
+    background-image: url('https://images.wikidexcdn.net/mwuploads/esssbwiki/c/c5/latest/20210520144829/Tablero_del_Estadio_Pok%C3%A9mon_2_SSBU_%286%29.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#battle-poster img {
+    width: 40vw;
+    max-width: 200px;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+    transform: none;
+}
+
+@media (max-width: 768px) {
+    #battle-poster img {
+        width: 20vw;
+        max-width: 150px;
+        height: auto;
+    }
+}
+
+.img-vs {
+    height: 100px;
+    /* Ajusta tamaño como quieras */
+    width: auto;
+    object-fit: contain;
+    margin: 0 10px;
+    /* Margen lateral para separar del pokémon */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    align-self: center;
+}
+
+@keyframes flash {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+
+/*Footer*/
+address {
+    margin-bottom: 0 !important;
 }
