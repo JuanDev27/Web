@@ -94,8 +94,9 @@ function generateBattlePoster() {
         container.appendChild(img);
 
         if (shinySelected) {
-            const shinyLabel = document.createElement("div");
-            shinyLabel.textContent = "✨ ¡SHINY! ✨";
+            const shinyLabel = document.createElement("div"); 
+            shinyLabel.classList.add("shiny-label");
+            shinyLabel.textContent = "✨¡SHINY!✨";
             shinyLabel.style.position = "absolute";
             shinyLabel.style.bottom = "-20px";
             shinyLabel.style.background = "gold";
