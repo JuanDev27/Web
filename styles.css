@@ -17,6 +17,7 @@ body {
 }
 
 #img_t {
+    border-radius: 25px;
     height: 500px;
     width: 1000px;
 }
@@ -167,6 +168,13 @@ footer {
     /* Retraso mayor para completar el efecto */
 }
 
+#img1_S3,
+#img2_S3,
+#img3_S3 {
+    border-radius: 25px;
+    margin-top: 25px !important;
+}
+
 /*Animacion de aparicion para el Header*/
 @keyframes fadeIn {
     from {
@@ -196,6 +204,7 @@ footer {
 
 /*Efecto de aparicion para Minecraft Logo(mcLogo)*/
 #mcLogo {
+    border-radius: 25px;
     width: 400px;
     height: 400px;
     filter: brightness(0%);
@@ -229,6 +238,7 @@ footer {
 
 /*Aplicar a imagen*/
 #pagoda {
+    border-radius: 25px;
     width: 500px;
     height: auto;
     animation: pulso 2s infinite ease-in-out;
